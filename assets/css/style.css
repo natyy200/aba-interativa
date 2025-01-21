@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-    --cor: #479031;
+    --neutral-color: #18181b;
+    --neutral-color2: #262626;
+    --primary-color: #5c8d4d;
+    --primary-color2: #4e6e44;
+    --text-color: #bfc5cc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--primary-color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#container {
+    background-color: var(--neutral-color2);
+    width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.tab-btn {
+    width: 100%;
+    border: none;
+    color: var(--text-color);
+    background-color: var(--neutral-color2);
+    border-radius: 8px 8px 0px  0px;
+    font-weight: 500;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+}
+
+.tab-btn:hover {
+    background-color: var(--primary-color2);
+}
+
+.content {
+    display: none;
+    color: var(--text-color);
+}
+
+.content.show {
+    display: flex;
+    gap: 14px;
+    background-color: var(--primary-color);
+    border-radius: 0px 0px 8px 8px;
+    padding: 16px;
+}
+
+.content-img {
+    width: 50%;
+    height: 250px;
+    margin-right: 10px;
+    background-color: #739b67;
+    border-radius: 10px;
+    padding: 10px;
 }
